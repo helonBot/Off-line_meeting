@@ -20,20 +20,24 @@
   </header>
   <div class="top-wrapper">
     <div class="container">
-      <h1>第1回(2回?)オフ会について</h1>
+      <h1>第1回(2回?)オフ会開催!!</h1>
     </div>
   </div>
   <div class="lesson-wrapper">
     <div class="container">
       <div class="heading"></div>
-      <div class="hidden_box">
-          <label for="label1">参加者</label>
-          <input type="checkbox" id="label1"/>
-          <div class="hidden_show">
-            <!--非表示ここから-->     
-      	      <p><img src="face.png"></p>
-            <!--ここまで-->
-          </div>
+      <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+        <h1>参加者</h1>
+        <a style="cursor:pointer;">▼ 参加者一覧</a>
+        </div>
+        <div id="open" style="display:none;clear:both;">
+          <ul>
+            <li>test</li>
+            <li>test2</li>
+          </ul>
+        </div>
+        <h3>参加者に名前を追加</h3>
+        <form action=""></form>
       </div>
 </div>
       </div> 
@@ -43,7 +47,6 @@
   <div class="message-wrapper">
     <div class="container">
       <div class="heading">
-        <input type="date"></input>
       </div>
     </div>
   </div>
