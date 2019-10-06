@@ -45,28 +45,6 @@ a {
   margin-bottom: 20px;
 }
 
-/*.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-*/
-
 .btn:hover {
   opacity: 1;
 }
@@ -177,10 +155,6 @@ header {
   box-shadow: none;
 }
 
-footer img {
-  width: 125px;
-}
-
 footer p {
   color: #b3aeb5;
   font-size: 12px;
@@ -189,14 +163,6 @@ footer p {
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
 }
 
 .clear {
