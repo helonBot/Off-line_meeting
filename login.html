@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Off-line meeting/top-page</title>
+  <title>Off-line meeting/login</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="mainsheet.css">
 </head>
@@ -20,20 +20,23 @@
       </div>
       <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
-        <a href="#">お知らせ</a>
+        <a href="#">NEWS</a>
       </div>
     </div>
   </header>
   <div class="top-wrapper">
     <div class="container">
-      <h1>パスワードを入力してください</h1>
-      <input type="button" value="パスワードを入力" onclick="gate();">
+      <h1>Create user name</h1>
+      <input type="text" name="textbox" id="favtext"/>
+      <input type="button" value="Admission" onclick="gate();">
     </div>
+    <script type="text/javascript" src="test.js">
+    setCookie('testName','sample',7);
+    </script>
   </div>
   <div class="lesson-wrapper">
     <div class="container">
-      <div class="heading">
-      </div>
+      <div class="heading"></div>
       <div class="clear"></div>
     </div>
   </div>
