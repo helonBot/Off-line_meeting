@@ -28,16 +28,23 @@
       <div class="heading"></div>
       <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
         <h1>参加者</h1>
-        <a style="cursor:pointer;">▼ 参加者一覧</a>
+        <a class="append-name" style="cursor:pointer;">▼ 参加者一覧</a>
         </div>
         <div id="open" style="display:none;clear:both;">
-          <ul>
-            <li>test</li>
-            <li>test2</li>
-          </ul>
+          <ul id="FavList"></ul>
         </div>
-        <h3>参加者に名前を追加</h3>
-        <form action=""></form>
+        <div class="append-name">
+          <script type="text/javascript" src="test.js"></script>
+          <p>参加者一覧に名前を追加<br/>
+            <input type="text" name="textbox" id="favtext" placeholder="" />
+            <input type="button" id="addtext" value="OK" onclick="bar();" />
+            <input type="button" id="addtext" value="test" onclick="username();">
+          </p>
+        </div>
+        <h1>日程</h1>
+        <p>■ 行けない日にちを選択してください</p>
+        <input type="date" name="example" min="2019-11-01" max="2019-11-30">
+        <p>↓赤くないところが行ける日</p>
       </div>
 </div>
       </div> 
@@ -46,8 +53,7 @@
   </div>
   <div class="message-wrapper">
     <div class="container">
-      <div class="heading">
-      </div>
+      <div class="heading"></div>
     </div>
   </div>
   <footer>
