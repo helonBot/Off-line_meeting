@@ -15,7 +15,7 @@ function bar() {
   document.cookie = 'cookie_name=test'
 }
 function username(user) {
-  document.cookie = 'date=' + encodeURIComponent(user)+"; path=/; domain:helonbot.github.io; max-age=3600; secure; samesite=lax;";
+  document.cookie = 'name=' + encodeURIComponent(user)+";helonbot.github.io; max-age=3600; secure; samesite=lax;";
 }
 // クッキー保存　setCookie(クッキー名, クッキーの値, クッキーの有効日数); //
 function setCookie(c_name,value,expiredays){
