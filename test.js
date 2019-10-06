@@ -1,5 +1,3 @@
-var count = 0;
-
 function bar() {
   // a 要素の作成と属性の指定
   var newAnchor = document.createElement("a");
@@ -17,7 +15,7 @@ function bar() {
   document.cookie = 'cookie_name=test'
 }
 function username(user) {
-  document.cookie = 'name=' + encodeURIComponent(user);
+  document.cookie = 'name=' + encodeURIComponent(user)+"path=/; domain:helonbot.github.io; max-age=3600; secure; samesite=lax;";
 }
 // クッキー保存　setCookie(クッキー名, クッキーの値, クッキーの有効日数); //
 function setCookie(c_name,value,expiredays){
