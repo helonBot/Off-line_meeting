@@ -7,6 +7,7 @@ body {
   font-family: "Hiragino Kaku Gothic ProN";
 }
 
+
 a {
   text-decoration: none;
 }
@@ -18,7 +19,7 @@ a {
 }
 
 .top-wrapper {
-  padding: 180px 0 100px 0;
+  padding: 180px 0 120px 0;
   background-image: url(hiyoko-boss.jpg);
   background-size: cover;
   color: white;
@@ -37,22 +38,6 @@ a {
   margin-bottom: 40px;
 }
 
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
 header {
   height: 65px;
   width: 100%;
@@ -60,11 +45,6 @@ header {
   position :fixed;
   top: 0;
   z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
 }
 
 .header-left {
@@ -113,34 +93,19 @@ header {
   width: 25%;
 }
 
-.lesson-icon {
-  position: relative;
+.name-list {
+  margin: 10px;
 }
 
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
+.append-name {
+  margin: 10px;
 }
 
 .heading h3 {
   font-weight: normal;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
+
 
 .message {
   padding: 15px 40px;
@@ -155,6 +120,10 @@ header {
   box-shadow: none;
 }
 
+footer img {
+  width: 125px;
+}
+
 footer p {
   color: #b3aeb5;
   font-size: 12px;
@@ -163,6 +132,14 @@ footer p {
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
 }
 
 .clear {
