@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
@@ -18,7 +19,7 @@ a {
 }
 
 .top-wrapper {
-  padding: 180px 0 200px 0;
+  padding: 150px 0 350px 0;
   background-image: url(hiyoko-boss.jpg);
   background-size: cover;
   color: white;
@@ -62,6 +63,14 @@ header {
   position :fixed;
   top: 0;
   z-index: 10;
+}
+
+.admission {
+  width: 120px;
+  height: 50px; 
+}
+.admission:hover{
+  color: blue;
 }
 
 .logo {
