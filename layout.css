@@ -6,6 +6,11 @@ body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
 }
+.calender{
+  position: absolute;
+  top: 60%;
+  width: 100%;
+}
 
 
 a {
