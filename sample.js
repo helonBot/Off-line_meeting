@@ -49,6 +49,30 @@ function setCookie(c_name,value,expiredays){
   // クッキーに保存
   document.cookie=s;
 }
+// クッキーの値を取得 getCookie(クッキー名); //
+function getCookie(c_name){
+  var st="";
+  var ed="";
+  if(document.cookie.length>0){
+      // クッキーの値を取り出す
+      st=document.cookie.indexOf(c_name + "=");
+      if(st!=-1){
+          st=st+c_name.length+1;
+          ed=document.cookie.indexOf(";",st);
+          if(ed==-1) ed=document.cookie.length;
+          // 値をデコードして返す
+          return unescape(document.cookie.substring(st,ed));
+      }
+  }
+  return "";
+}
+// クッキーの値をアラートで表示
+function checkCookie(value)){
+  if(getCookie(value)){
+      var setName = getCookie(value);
+      alert(setName);
+  }
+}
 //cookieの設定
 function SWSetCookie(name, value, expire, path) {
     var cookie = name + '=' + escape(value);
