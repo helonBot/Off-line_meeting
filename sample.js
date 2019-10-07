@@ -68,7 +68,7 @@ function getCookie(c_name){
 }
 // クッキーの値をアラートで表示
 function checkCookie(value)){
-  if(getCookie(value)){
+  if(getCookie(value){
       var setName = getCookie(value);
       alert(setName);
   }
