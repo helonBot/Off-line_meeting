@@ -18,7 +18,7 @@ function username(user) {
 }
 function cl_color(day) {
   var newColor = document.getElementById(day);
-  window.onload = setCookie(day,day,30)
+  window.onload = setCookie(day+'0',day,30)
   newColor.setAttribute('bgcolor',"#9F9F9F");
   newColor.setAttribute('style',"color: #000000");
 }
