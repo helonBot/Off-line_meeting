@@ -12,8 +12,12 @@ function bar() {
   newLi.appendChild(newAnchor);
   var list = document.getElementById("FavList");
   list.appendChild(newLi);
-  document.cookie = 'cookie_name=test';
 }
 function username(user) {
   document.cookie = 'name=' + encodeURIComponent(user)+";helonbot.github.io; max-age=3600; secure; samesite=lax;";
+}
+function cl_color(day) {
+  var newColor = document.getElementById(day);
+  newColor.setAttribute('bgcolor',"#9F9F9F");
+  newColor.setAttribute('style',"color: #000000");
 }
