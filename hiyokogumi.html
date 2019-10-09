@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script>
+    var url = document.location.href;
+    if (url.indexOf('?user=') <= 0) {
+      window.onload = function () {
+        var UserInput = prompt("UserNameの入力（誰だかわかる名前にしてね）;", "");
+        var newName = document.location.href = url + '?user=' + UserInput;
+      }
+    }
+  </script>
+  <script src="./modules/cookie.js">
+  var url = document.location.href;
+  if (url.indexOf('?user=')){
+    var userName = url.split('=')[1]
+    setCookie(userName,'user',7)
+  }
+  setCookie()
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Off-line meeting/menu</title>
+  <link rel="stylesheet" href="./layout/sample.css">
+</head>
+
+<body style="background: orange">
+  <div class="container_sp">
+    <div class="top-field">
+      <h1 class="title_sp">第1回オフ会開催!!</h1>
+    </div>
+    <div class="menu-field">
+      <script src="./modules/iframe.js"></script>
+      <script src="./modules/func.js"></script>
+      <h4>~menu~</h4>
+      <article><a onclick="setHTML('main-iframe','./links/news.html');">・News</a></article><br>
+      <article><a onclick="setHTML('main-iframe','./links/home.html');">・Home</a></article><br>
+      <article><a onclick="setHTML('main-iframe','./links/member.html');">・Member</a></article><br>
+      <article><a onclick="setHTML('main-iframe','./links/money.html');">・Money</a></article><br>
+      <article><a onclick="setMap('main-iframe');">・Map</a></article><br>
+      <article><a onclick="setHTML('main-iframe','./links/schedule.html');">・Schedule</a></article>
+      <h4>~login~</h4>
+      <iframe id="list-iframe" width="110px" height="125px" src="./links/loginusers.html" style="border: 0px;"></iframe>
+    </div>
+    <div class="main-field">
+      <iframe id="main-iframe" width="250px" height="525px" src="./links/home.html" style="border: 0px;"></iframe>
+    </div>
+  </div>
+  <div class="container_pc">
+    <div id="menu">
+      <article><a id="schedule" href="hiyokohiyoko.html">Schedule</a></article>
+    </div>
+  </div>
+</body>
+
+</html>
