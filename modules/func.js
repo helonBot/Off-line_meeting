@@ -31,14 +31,7 @@ function createUserName() {
   document.location.href = document.location.href + '?' + UserInput;
 }
 function cl_color(day) {
-  var url = document.location.href;
-  send_text(day,'test', url);
   var newColor = document.getElementById(day);
-  console.log(document.location.href);
-  console.log(location.href);
-  var query = location.search;
-  var value = query.split('&');
-  console.log(decodeURIComponent(value));
   newColor.setAttribute('bgcolor', "#9F9F9F");
   newColor.setAttribute('style', "color: #000000");
 }
