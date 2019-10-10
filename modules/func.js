@@ -18,7 +18,7 @@ function gate() {
   if (UserInput) {
     location.href = UserInput + ".html";
   }else{
-    alert('パスワードを入力してください')
+    alert('パスワードを入力してください');
     location.href = "login.html";
   }
 }
