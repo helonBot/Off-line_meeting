@@ -19,7 +19,7 @@ function gate() {
     location.href = UserInput + ".html";
   }else{
     alert('パスワードを入力してください');
-    location.href = "login.html";
+    location.href = "https://helonbot.github.io/off-line_meeting/login.html";
   }
 }
 function userData() {
