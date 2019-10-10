@@ -1,0 +1,42 @@
+@media only screen and (max-width: 736px) {
+  .container_pc{display: none;}
+  .container-sp{
+    display: grid;
+    grid-template-rows: 80px 10px 1110px;
+    grid-template-columns: 30% 40% 70%;
+  }
+  .field{
+    background-image: url(../imgs/ogakuzu.jpg);
+  }.top-field{
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }.title-sp{
+    grid-row: 1/2;
+    grid-column: 1/4;
+    border-radius: 25px 0px 0px 25px;
+    color: #494949;
+    background-color: rgba( 200, 200, 200, 0.55);
+    border-left: solid 8px #ffaf58;
+    border-bottom: solid 8px #ffaf58; 
+    margin-top: 3%;
+    margin-left: 18%;
+  }#open{
+    background: rgba(253, 149, 53, 0.75);
+  }#key{
+    margin-top: 12px; 
+    width: 30px;
+    height: 30px;
+  }
+  .main-field{
+    grid-row: 3/4;
+    grid-column: 2/4;
+    background-image: url(./icons/key.ico);
+  }#open{
+    background: rgba(253, 149, 53, 0.75);
+    border-radius: 25px 0px 0px 25px;
+  }#btn{
+    margin: 20px;
+    font-size: 25px;
+    color: white;
+  }
+}
