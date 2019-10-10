@@ -7,7 +7,11 @@
     if (url.indexOf('?user=') <= 0) {
       window.onload = function () {
         var UserInput = prompt("UserNameの入力（誰だかわかる名前にしてね）;", "");
-        var newName = document.location.href = url + '?user=' + UserInput;
+        if (UserInput){
+          var newName = document.location.href = url + '?user=' + UserInput;
+        }else{
+          window.location.reload();
+        }
       }
     }
   </script>
