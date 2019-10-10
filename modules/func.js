@@ -15,15 +15,20 @@ function bar() {
 }
 function gate() {
   var UserInput = prompt("パスワードを入力して下さい:", "");
-  location.href = UserInput + ".html";
+  if (UserInput) {
+    location.href = UserInput + ".html";
+  }else{
+    alert('パスワードを入力してください')
+    location.href = "login.html";
+  }
 }
-function userData(){
+function userData() {
   var url = document.location.href;
-  if(url.indexOf('user')<=0){
+  if (url.indexOf('user') <= 0) {
     var user = url.split('=');
     console.log('a')
     console.log(user[1]);
-    document.location.href = '../links/schedule.html?user='+encodeURIComponent('田中');
+    document.location.href = '../links/schedule.html?user=' + encodeURIComponent('田中');
   }
 }
 function createUserName() {
@@ -35,18 +40,18 @@ function cl_color(day) {
   newColor.setAttribute('bgcolor', "#9F9F9F");
   newColor.setAttribute('style', "color: #000000");
 }
-function getUser(){
+function getUser() {
   var url = document.location.href;
   var user = url.split('=')
   document.getElementById('schedule') = user;
 }
-function send_text(label,text, url) {
+function send_text(label, text, url) {
   var url = document.location.href;
-  document.location.href = url+'?'+label+'='+text;
-  if(url.indexOf('?')<=0){
-    document.location.href = url+'?'+label+'='+text;
-  }else{
-    document.location.href = url+'&'+label+'='+text;
+  document.location.href = url + '?' + label + '=' + text;
+  if (url.indexOf('?') <= 0) {
+    document.location.href = url + '?' + label + '=' + text;
+  } else {
+    document.location.href = url + '&' + label + '=' + text;
   }
 }
 // クッキー保存　setCookie(クッキー名, クッキーの値, クッキーの有効日数); //
@@ -280,3 +285,4 @@ function getKey(event) {
     cursor.continue();
   }
 }
+
