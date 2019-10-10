@@ -1,50 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <script type="text/javascript">
-    function gate() {
-       var UserInput = prompt("パスワードを入力して下さい:","");
-       location.href = UserInput + ".html";
-    }
-  </script>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Off-line meeting/login</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="topsheet.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>login..</title>
+  <link rel="stylesheet" href="./layout/topsheet.css">
+  <link rel="shortcut icon" href="./icons/key.ico">
+  <style>a{text-decoration:none}</style>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#"　>NEW NAME</a><a href="#">NEWS</a>
-      </div>
+<body class="field">
+  <div class="container-sp">
+    <div class="top-field">
+      <h1 class="title-sp"><img id="key" src="./icons/key.ico">　秘密の部屋</h1>
     </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>〜秘密の部屋〜</h1>
-      <input class="admission" type="button" value="入室する" onclick="gate();">
+    <div class="main-field">
+      <script src="./modules/func.js"></script>
+      <br><br>
+      <article id="open"><a id="btn" href="#" onclick="gate()">入室</a></article>
+
     </div>
   </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading"></div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-    </div>
-  </footer>
 </body>
 </html>
