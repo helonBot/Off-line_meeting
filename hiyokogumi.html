@@ -6,7 +6,7 @@
     var url = document.location.href;
     if (url.indexOf('?user=') <= 0) {
       window.onload = function () {
-        var UserInput = prompt("UserNameの入力（誰だかわかる名前にしてね）;", "");
+        var UserInput = prompt("UserNameの入力（誰だかわかる名前にしてね", "");
         if (UserInput){
           var newName = document.location.href = url + '?user=' + UserInput;
         }
@@ -25,10 +25,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Off-line meeting/menu</title>
-
   <link rel="stylesheet" href="./layout/main.css">
 </head>
-
 <body class="field">
   <div class="container_sp">
     <div class="head-field">
@@ -37,12 +35,14 @@
     <div class="menu-field">
       <h4>~menu~</h4>
       <script src="./modules/iframe.js"></script>
-      <article><a onclick="setHTML('main-iframe','./links/news.html');">・News</a></article><br>
-      <article><a onclick="setHTML('main-iframe','./links/home.html');">・Home</a></article><br>
-      <article><a onclick="setHTML('main-iframe','./links/member.html');">・Member</a></article><br>
-      <article><a onclick="setHTML('main-iframe','./links/money.html');">・Money</a></article><br>
-      <article><a onclick="setMap('main-iframe');">・Map</a></article><br>
-      <article><a onclick="setHTML('main-iframe','./links/schedule.html');">・Schedule</a></article>
+      <ul>
+      <li><a onclick="setHTML('main-iframe','./links/news.html');"><img class="icon" src="./icons/news.ico">News</a></li><br>
+      <li><a onclick="setHTML('main-iframe','./links/home.html');"><img class="icon" src="./icons/home.ico">Home</a></li><br>
+      <li><a onclick="setHTML('main-iframe','./links/member.html');"><img class="icon" id="member" src="./icons/member.ico">Member</a></li><br>
+      <li><a onclick="setHTML('main-iframe','./links/money.html');"><img class="icon" src="./icons/money.ico">Money</a></li><br>
+      <li><a onclick="setMap('main-iframe');"><img class="icon" src="./icons/map.ico">　Map</a></li><br>
+      <li><a onclick="setHTML('main-iframe','./links/schedule.html');"><img class="icon" src="./icons/calender.ico">Schedule</a></li><br>
+      </ul>
     </div>
     <div class="main-field">
       <iframe id="main-iframe" src="./links/home.html" style="border: 0px;"></iframe>
