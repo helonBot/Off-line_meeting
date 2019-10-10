@@ -1,58 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
 
-@media only screen and (max-width : 736px){
-  .container_pc{display:none}
-  .container_sp{
-    display: grid;
-    grid-template-rows: 75px 10px 100px 500px 175px;
-    grid-template-columns: 15% 3% 5% 3% 70%;
-  }
-  .field{
-    background-image: url(../imgs/ogakuzu.jpg)
-  }
-  .head-field{
-    grid-row: 1 / 2;
-    grid-column: 1 / 6;
-  }.title_sp{
-    grid-row:1/3;
-    width: 1 / 7;
-    border-radius: 25px 0px 0px 25px;
-    color: #494949;
-    background-color: rgba( 200, 200, 200, 0.55);
-    border-left: solid 8px #ffaf58;
-    border-bottom: solid 8px #ffaf58; 
-    margin-top: 3%;
-    margin-left: 18%;
-  }
-  .menu-field{
-    grid-row: 3 / 6;
-    grid-column: 1 / 4;
-    border-radius: 0px 25px 0px 0px;
-    background-color: rgba( 230, 230, 230, 0.75);
-  }.icon{
-    margin-left: 20px; 
-    width: 30px;
-    height: 30px;
-  }
-  .main-field{
-    grid-row: 3 / 6;
-    grid-column: 5 / 6;
-  }#main-iframe{
-    width: 344px;
-    height: 500px;
-  }
-  .list-iframe,.main-iframe-top,.main-iframe-center{
-    border: none;
-  }
-  .calender{
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 6px;
-  }#calender-top{
-    border: 0;
-    border-radius: 6px 6px 0px 0px;
-  }#calender-bottom-left{
-    border-bottom-right-radius: 6px;
-  }#calender-bottom-right{
-    border-bottom-left-radius: 6px;
-  }
-}
+<head>
+  <script>
+    var url = document.location.href;
+    if (url.indexOf('?user=') <= 0) {
+      window.onload = function () {
+        var UserInput = prompt("UserNameの入力（誰だかわかる名前にしてね", "");
+        if (UserInput){
+          var newName = document.location.href = url + '?user=' + UserInput;
+        }
+      }
+    }
+  </script>
+  <script src="./modules/cookie.js">
+    var url = document.location.href;
+    if (url.indexOf('?user=')) {
+      var userName = url.split('=')[1]
+      setCookie(userName, 'user', 7)
+    }
+    setCookie()
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Off-line meeting/menu</title>
+  <link rel="stylesheet" href="./layout/main.css">
+</head>
+<body class="field">
+  <div class="container_sp">
+    <div class="head-field">
+      <h1 class="title_sp">第1回オフ会開催!!</h1>
+    </div>
+    <div class="menu-field">
+      <h4>~menu~</h4>
+      <script src="./modules/iframe.js"></script>
+      <ul>
+      <article>
+        <a onclick="setHTML('main-iframe','./links/news.html');">
+          <img class="icon" src="./icons/news.ico">News</a>
+      </article><br>
+      <article>
+        <a onclick="setHTML('main-iframe','./links/home.html');">
+          <img class="icon" src="./icons/home.ico">Home</a>
+      </article><br>
+      <article>
+        <a onclick="setHTML('main-iframe','./links/member.html');">
+          <img class="icon" id="member" src="./icons/member.ico">Member</a>
+      </article><br>
+      <article>
+        <a onclick="setHTML('main-iframe','./links/money.html');">
+          <img class="icon" src="./icons/money.ico">Money</a>
+      </article><br>
+      <article>
+        <a onclick="setMap('main-iframe');">
+          <img class="icon" src="./icons/map.ico">　Map</a></article><br>
+      <article>
+        <a onclick="setHTML('main-iframe','./links/schedule.html');">
+          <img class="icon" src="./icons/calender.ico">Schedule</a>
+      </article><br>
+      </ul>
+    </div>
+    <div class="main-field">
+      <iframe id="main-iframe" src="./links/home.html" style="border: 0px;"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>
